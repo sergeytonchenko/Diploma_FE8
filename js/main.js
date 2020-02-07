@@ -1,15 +1,11 @@
-// $(window).scroll(function() {
-//     if ($(this).scrollTop()>=900) {
-//       // длительность анимации - 'slow'
-//       // тип анимации -  'linear'
-//       $('.aboutme__block1').fadeIn('slow','linear');
-//     }
-//     else {
-//       // длительность анимации - 'fast'
-//       // тип анимации -  'swing'
-//       $('.aboutme__block1').fadeOut('fast','swing');
-//     }
-//   });
+$(window).scroll(function() {
+    if ($(this).scrollTop()>=100) {      
+      $('.aboutme__up').fadeIn('slow','linear');
+    }
+    else {      
+      $('.aboutme__up').fadeOut('fast','swing');
+    }
+  });
 
 $("#portfolio__slider").owlCarousel({
     items: 1,
@@ -45,6 +41,13 @@ $('#about').on('click', function(){
         scrollTop: $(dest).offset().top}, 700);
     });
 
+    $('#about1').on('click', function(){        
+      let dest = document.querySelector('.aboutme'); 
+        $('html,body').animate({ 
+          scrollTop: $(dest).offset().top}, 700);
+      });
+
+
 $('#scroll').on('click', function(){        
     let dest = document.querySelector('.aboutme'); 
       $('html,body').animate({ 
@@ -57,14 +60,58 @@ $('#skills').on('click', function(){
         scrollTop: $(dest).offset().top}, 700);
     });
 
+    $('#skills1').on('click', function(){        
+      let dest = document.querySelector('.skills'); 
+        $('html,body').animate({ 
+          scrollTop: $(dest).offset().top}, 700);
+      });
+
 $('#portfolio').on('click', function(){        
     let dest = document.querySelector('.portfolio'); 
       $('html,body').animate({ 
         scrollTop: $(dest).offset().top}, 700);
     });
 
+    $('#portfolio1').on('click', function(){        
+      let dest = document.querySelector('.portfolio'); 
+        $('html,body').animate({ 
+          scrollTop: $(dest).offset().top}, 700);
+      });
+
 $('#contact').on('click', function(){        
     let dest = document.querySelector('.contact'); 
       $('html,body').animate({ 
         scrollTop: $(dest).offset().top}, 700);
     });
+
+    $('#contact1').on('click', function(){        
+      let dest = document.querySelector('.contact'); 
+        $('html,body').animate({ 
+          scrollTop: $(dest).offset().top}, 700);
+      });
+
+$('#up').on('click', function(){        
+  let dest = document.querySelector('.header'); 
+    $('html,body').animate({ 
+      scrollTop: $(dest).offset().top}, 700);
+  });
+
+
+    jQuery(document).ready(function($) {
+
+      $('.tab_ru').hide();
+      $('.tab_en').show();
+      $('.header__lang p:first').addClass('active');
+    
+      $('.header__lang p').click(function(event) {
+        $('.header__lang p').removeClass('active');
+        console.log(this);
+        $(this).addClass('active');
+        $('.tab_ru').hide();
+        $('.tab_en').hide();
+
+        let selectContent = $(this).attr("id");
+        console.log(selectContent);        
+        $(selectContent).fadeIn();    
+      })  
+    })
