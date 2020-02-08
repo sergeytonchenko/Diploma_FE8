@@ -8679,6 +8679,7 @@ table {
     box-shadow: 0 0 15px 5px rgba(181, 55, 55, 0.72);
     height: 50px;
     width: 50px;
+    font-size: 22px;
     position: relative;
     text-decoration: none; }
     @media (max-width: 1199px) {
@@ -8703,7 +8704,12 @@ table {
     .header__scroll::before {
       content: url(../img/header/scroll.svg);
       position: absolute;
-      top: 12px; }
+      top: 12px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); 
+     }
   .header__burger {
     position: absolute;
     right: 0; }
@@ -9329,6 +9335,7 @@ table {
     box-shadow: 0 0 15px 5px rgba(181, 55, 55, 0.72);
     height: 50px;
     width: 50px;
+    font-size: 22px;
     position: relative;
     text-decoration: none;
     margin-right: 15px; }
