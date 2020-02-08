@@ -19,8 +19,8 @@ $("#portfolio__slider").owlCarousel({
     animateOut: "zoomOutLeft",    
 });
 
-$('.owl-prev span').html('<img src="../img/portfolio/prev.png"></img>');
-$('.owl-next span').html('<img src="../img/portfolio/next.png"></img>');
+$('.owl-prev span').html('<img src="./img/portfolio/prev.png"></img>');
+$('.owl-next span').html('<img src="./img/portfolio/next.png"></img>');
 
 $('#about').on('click', function(){        
     let dest = document.querySelector('.aboutme'); 
